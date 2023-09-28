@@ -1,0 +1,12 @@
+# Python byte-code.
+__pycache__
+
+# DB.
+db.sqlite3
+
+# Media files.
+media
+
+# Virtual environment.
+env
+venv
