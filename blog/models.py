@@ -1,7 +1,8 @@
 from django.db import models
+from django.urls import reverse
 from django.utils import timezone
 from django.contrib.auth.models import User
-from django.urls import reverse
+from taggit.managers import TaggableManager
 
 
 class PublishedManager(models.Manager):
@@ -28,7 +29,8 @@ class Post(models.Model):
 
 
 	objects = models.Manager() # default manager.
-	published = PublishedManager() # конкретно-прикладной менеджер.
+	published = PublishedManager() # app specific manager.
+	tags = TaggableManager()
 
 
 	class Meta:
