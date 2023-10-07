@@ -128,4 +128,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # Email server configuration.
+EMAIL_HOST_USER = 'narekbayanduryan16@gmail.com'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
