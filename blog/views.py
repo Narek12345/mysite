@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.conf import settings
 from .forms import EmailPostForm
 from .models import Post
 
@@ -35,6 +36,11 @@ def post_share(request, post_id):
 			# The form fields were successfully validated.
 			cd = forms.cleaned_data
 			# Send an email.
+			post_url = request.build_absolute_uri(post.get_absolute_url())
+			subject = f'{cd["name"]} recommends you read {post.title}'
+			message = f'Read {post.title} at {post_url}\n\n{cd["name"]} comments: {cd["comments"]}'
+			send_mail(subject, message, settings.EMAIL_HOST_USER, [cd['to']])
+			sent = True
 	else:
 		form = EmailPostForm()
-	return render(request, 'blog/post/shate.html', {'post': post, 'form': form})
+	return render(request, 'blog/post/shate.html', {'post': post, 'form': form}, 'sent': sent)
