@@ -7,11 +7,11 @@
 	{% if query %}
 		<h1>Posts containing "{{ query }}"</h1>
 		<h3>
-			{% with result.count as total_results %}
+			{% with results.count as total_results %}
 				Found {{ total_results }} result{{ total_results|pluralize }}
 			{% endwith %}
 		</h3>
-		{% for post in posts %}
+		{% for post in results %}
 			<h4>
 				<a href="{{ post.get_absolute_url }}">
 					{{ post.title }}
