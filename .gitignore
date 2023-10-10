@@ -10,3 +10,6 @@ media
 # Virtual environment.
 env
 venv
+
+# Unloaded db data.
+mysite_data.json
