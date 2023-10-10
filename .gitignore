@@ -13,3 +13,5 @@ venv
 
 # Unloaded db data.
 mysite_data.json
+
+base.html
