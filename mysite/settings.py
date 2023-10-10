@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 
     # My apps:
     'blog.apps.BlogConfig',
+    'list_apps.apps.ListAppsConfig',
 
     # Other apps:
     'taggit',
