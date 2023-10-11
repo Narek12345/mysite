@@ -1,21 +1,26 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>List apps</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/blog.css' %}">
 </head>
 <body>
-	<header>
-		Header
-	</header>
-
-	<div>
-		Main
+	<div id="sidebar">
+		<h3>List apps:</h3>
+		<ul>
+			<li><a href="{% url 'blog:post_list' %}">blog</a></li>
+		</ul>
 	</div>
 
-	<footer>
-		Footer
-	</footer>
+	<div id="content">
+		<h1><a href="{% url 'list_apps:index' %}">List apps</a></h1>
+		<h2>The main page with all the contained sites in this project.</h2>
+		<h2>The <a href="https://github.com/Narek12345/mysite">github</a> of this project is open, so anyone can enter it and copy all the existing code.</h2>
+		<h2>For all questions regarding the project, you can personally ask them to the chief programmer <a href="https://mail.google.com/mail/u/1/?pli=1#inbox?compose=new">narekbayanduryan16@gmail.com</a></h2>
+	</div>
 </body>
 </html>
