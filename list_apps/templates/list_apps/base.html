@@ -3,12 +3,14 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>{% block content %}List apps{% endblock %}</title>
+		<title>{% block title %}List apps{% endblock %}</title>
 	</head>
 	<body>
 		<header>Heading</header>
-		{% block content %}
-		{% endblock %}
+		<div class="content">
+			{% block content %}
+			{% endblock %}
+		</div>
 		<footer>Footer</footer>
 	</body>
 </html>
