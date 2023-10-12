@@ -1,8 +1,6 @@
 # Mysite
 
-![Image alt](https://github.com/Narek12345/mysite/tree/main/blog/static/css/blog.png)
-
-
+![Image alt](https://raw.githubusercontent.com/Narek12345/mysite/main/blog/static/img/blog.png)
 
 This project is a website with a main page that will list all applications that are designed to work with the user and which have a convenient interface for interacting with users.
 
